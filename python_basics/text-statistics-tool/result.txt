@@ -1,0 +1,9 @@
+Character count: 104
+Word count: 15
+Unique word count: 10
+Top 5 most frequent words:
+and: 2
+is: 2
+learning: 2
+machine: 2
+useful: 2

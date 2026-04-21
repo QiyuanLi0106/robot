@@ -1,0 +1,3 @@
+Machine learning is useful.
+Machine learning is powerful and useful.
+Robots need control and perception.
