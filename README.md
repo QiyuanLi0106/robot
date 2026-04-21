@@ -40,7 +40,7 @@ This is a simple Python text analysis tool that can:
 这个仓库用于分阶段记录我的学习过程和项目积累.  
 This repository is used to record my step-by-step learning process and project accumulation.
 
-后续会继续加入更多模块，包括 Linux、ROS 2、移动机器人仿真、路径规划等内容.  
+后续会继续加入更多模块, 包括 Linux、ROS 2、移动机器人仿真、路径规划等内容.  
 More modules will be added later, including Linux, ROS 2, mobile robot simulation, and path planning.
 
 本仓库中的学习工作在 ChatGPT 5.4 的指导下展开.  
