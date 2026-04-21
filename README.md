@@ -3,7 +3,7 @@
 这是一个用于记录我在人工智能、机器人与具身智能方向长期学习过程的仓库.  
 This repository records my long-term learning process in artificial intelligence, robotics, and embodied intelligence.
 
-我当前的主学习路线是：
+我当前的主学习路线是:  
 My current main learning route is:
 
 Python 工程基础 → Linux / ROS 2 → 移动机器人仿真 → 控制与规划 → 机械臂与具身智能扩展  
@@ -28,18 +28,12 @@ Location: `python_basics/text_statistics_tool/`
 这是一个简单的 Python 文本分析工具，可以：
 This is a simple Python text analysis tool that can:
 
-- 读取 `.txt` 文件  
-  Read a `.txt` file
-- 统计字符数  
-  Count characters
-- 统计单词数  
-  Count words
-- 统计唯一单词数  
-  Count unique words
-- 输出出现频率最高的 5 个单词  
-  Show the top 5 most frequent words
-- 将结果保存到 `result.txt`  
-  Save the result to `result.txt`
+- 读取 `.txt` 文件 / Read a `.txt` file
+- 统计字符数 / Count characters
+- 统计单词数 / Count words
+- 统计唯一单词数 / Count unique words
+- 输出出现频率最高的 5 个单词 / Show the top 5 most frequent words
+- 将结果保存到 `result.txt` / Save the result to `result.txt`
 
 ## 说明 / Notes
 
