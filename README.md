@@ -15,13 +15,11 @@ Python engineering fundamentals → Linux / ROS 2 → mobile robot simulation �
 robot/
 ├── README.md
 └── python_basics/
+    ├── README.md
     ├── text_statistics_tool/
     ├── file_extension_counter/
     ├── csv_score_analyzer/
     └── log_keyword_counter/
-        ├── log_keyword_counter.py
-        ├── sample.log
-        └── README.md
 ```
 
 ## 当前项目 / Current Projects
