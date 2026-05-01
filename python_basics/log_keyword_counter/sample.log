@@ -1,0 +1,6 @@
+[INFO] Robot started successfully
+[WARNING] Battery level is low
+[INFO] Navigation module initialized
+[ERROR] Failed to connect to sensor
+[INFO] Retrying sensor connection
+[ERROR] Sensor connection failed again

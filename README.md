@@ -17,9 +17,10 @@ robot/
 └── python_basics/
     ├── text_statistics_tool/
     ├── file_extension_counter/
-    └── csv_score_analyzer/
-        ├── csv_score_analyzer.py
-        ├── scores.csv
+    ├── csv_score_analyzer/
+    └── log_keyword_counter/
+        ├── log_keyword_counter.py
+        ├── sample.log
         └── README.md
 ```
 
@@ -71,6 +72,22 @@ It currently supports:
 - 计算平均分 / Calculate the average score
 - 统计最高分和最低分 / Find the maximum and minimum scores
 - 统计不及格人数 / Count the number of failing students
+
+### 4. log_keyword_counter / 日志关键词统计工具
+
+位置: `python_basics/log_keyword_counter/`  
+Location: `python_basics/log_keyword_counter/`
+
+这是一个简单的 Python 工具, 用于统计日志文件中指定关键词出现的次数.  
+This is a simple Python tool for counting occurrences of a specified keyword in a log file.
+
+它目前支持:  
+It currently supports:
+
+- 读取 `.log` 日志文件 / Read a `.log` file
+- 从命令行接收关键词 / Receive the keyword from command-line arguments
+- 统计关键词在日志文件中的出现次数 / Count occurrences of the keyword in the log file
+- 在终端中输出统计结果 / Print the counting result in the terminal
 
 ## 说明 / Notes
 
