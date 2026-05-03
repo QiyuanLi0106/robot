@@ -186,11 +186,11 @@ find . -name "*.txt"
 
 ### Output Redirection
 
-`>` 表示覆盖写入文件.  
-`>` writes to a file by overwriting existing content.
+符号 `>` 表示覆盖写入文件.  
+The symbol `>` writes to a file by overwriting existing content.
 
-`>>` 表示追加写入文件.  
-`>>` appends content to a file.
+符号 `>>` 表示追加写入文件.  
+The symbol `>>` appends content to a file.
 
 ```bash
 echo "line 1" > multi_line.txt
