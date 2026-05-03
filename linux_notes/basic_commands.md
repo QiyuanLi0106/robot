@@ -184,7 +184,7 @@ find . -name "*.log"
 find . -name "*.txt"
 ```
 
-### `>` 和 `>>`
+### Output Redirection
 
 `>` 表示覆盖写入文件.  
 `>` writes to a file by overwriting existing content.
