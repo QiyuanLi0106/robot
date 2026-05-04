@@ -328,3 +328,73 @@ Output:
 ```text
 Usage: ./greet.sh <name>
 ```
+
+## 环境变量与 source / Environment Variables and source
+
+### Environment Variable
+
+环境变量是当前终端或系统中保存的一些配置信息.  
+Environment variables are configuration values stored in the current terminal or system.
+
+常见环境变量:  
+Common environment variables:
+
+- `$HOME`: 当前用户家目录 / Current user's home directory
+- `$USER`: 当前用户名 / Current username
+- `$PATH`: 系统查找可执行命令的路径列表 / Search paths for executable commands
+
+```bash
+echo $HOME
+echo $USER
+echo $PATH
+```
+
+### `export`
+
+设置环境变量.  
+Set an environment variable.
+
+```bash
+export ROBOT_NAME=mobile_robot_01
+```
+
+临时修改 PATH:  
+Temporarily modify PATH:
+
+```bash
+export PATH=$PATH:$(pwd)
+```
+
+这表示在原来的 PATH 后面追加当前目录.  
+This appends the current directory to the original PATH.
+
+### `source`
+
+在当前 shell 中执行脚本, 常用于加载环境配置.  
+Run a script in the current shell, commonly used to load environment configuration.
+
+```bash
+source setup_env.sh
+```
+
+### `bash script.sh` 和 `source script.sh` 的区别 / Difference Between `bash script.sh` and `source script.sh`
+
+`bash script.sh` 会在子 shell 中执行脚本, 脚本结束后变量通常不会保留在当前终端.  
+`bash script.sh` runs the script in a subshell, so variables usually do not remain in the current terminal after the script ends.
+
+`source script.sh` 会在当前 shell 中执行脚本, 脚本设置的环境变量会保留在当前终端.  
+`source script.sh` runs the script in the current shell, so environment variables set by the script remain in the current terminal.
+
+### `env | grep`
+
+查看并筛选环境变量.  
+Show and filter environment variables.
+
+```bash
+env | grep ROBOT
+```
+
+### Why ROS 2 Uses `source`
+
+ROS 2 经常使用 `source install/setup.bash`, 目的是把 ROS 2 工作空间的环境变量加载到当前终端.  
+ROS 2 often uses `source install/setup.bash` to load workspace environment variables into the current terminal.
