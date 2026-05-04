@@ -196,3 +196,135 @@ The symbol `>>` appends content to a file.
 echo "line 1" > multi_line.txt
 echo "line 2" >> multi_line.txt
 ```
+
+## 权限与 Shell 脚本 / Permissions and Shell Scripts
+
+### `ls -l`
+
+查看文件和目录的详细信息, 包括权限, 所有者, 大小和修改时间.  
+Show detailed information about files and directories, including permissions, owner, size, and modification time.
+
+```bash
+ls -l
+```
+
+权限示例:  
+Permission example:
+
+```text
+-rw-r--r--
+```
+
+其中 `r` 表示可读, `w` 表示可写, `x` 表示可执行.  
+Here, `r` means read, `w` means write, and `x` means execute.
+
+### `chmod +x`
+
+给文件添加可执行权限.  
+Add executable permission to a file.
+
+```bash
+chmod +x hello.sh
+```
+
+### `bash script.sh`
+
+使用 bash 执行脚本文件.  
+Run a script file with bash.
+
+```bash
+bash hello.sh
+```
+
+这种方式不要求脚本本身具有可执行权限.  
+This method does not require the script itself to have executable permission.
+
+### `./script.sh`
+
+直接执行当前目录下的脚本文件.  
+Execute a script file in the current directory directly.
+
+```bash
+./hello.sh
+```
+
+这种方式要求脚本文件具有可执行权限.  
+This method requires the script file to have executable permission.
+
+### Shebang
+
+Shell 脚本第一行通常写成:  
+The first line of a shell script is usually written as:
+
+```bash
+#!/bin/bash
+```
+
+它表示这个脚本使用 bash 解释器执行.  
+It means the script should be executed with the bash interpreter.
+
+### Pipe
+
+管道 `|` 会把左边命令的输出传给右边命令继续处理.  
+The pipe `|` passes the output of the left command to the right command for further processing.
+
+```bash
+ls | wc -l
+```
+
+这个命令表示先列出当前目录内容, 再统计输出行数.  
+This command lists the current directory contents first, then counts the number of output lines.
+
+### Shell Script with Arguments
+
+Shell 脚本可以接收命令行参数.  
+Shell scripts can accept command-line arguments.
+
+常用参数变量:  
+Common parameter variables:
+
+- `$1` 表示第一个参数 / `$1` represents the first argument  
+- `$2` 表示第二个参数 / `$2` represents the second argument  
+- `$#` 表示参数个数 / `$#` represents the number of arguments  
+
+示例:  
+Example:
+
+```bash
+#!/bin/bash
+
+if [ $# != 1 ]
+then
+    echo "Usage: ./greet.sh <name>"
+else
+    echo "Hello, $1"
+fi
+```
+
+运行方式:  
+How to run:
+
+```bash
+./greet.sh qiyuan
+```
+
+输出:  
+Output:
+
+```text
+Hello, qiyuan
+```
+
+如果参数错误:  
+If arguments are incorrect:
+
+```bash
+./greet.sh
+```
+
+输出:  
+Output:
+
+```text
+Usage: ./greet.sh <name>
+```
