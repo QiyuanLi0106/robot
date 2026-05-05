@@ -541,3 +541,87 @@ tree -L 2
 
 其中 `-L 2` 表示只显示 2 层目录.  
 Here, `-L 2` means displaying only two directory levels.
+
+## Python 虚拟环境 / Python Virtual Environment
+
+### `python3 -m venv`
+
+创建 Python 虚拟环境.  
+Create a Python virtual environment.
+
+```bash
+python3 -m venv .venv
+```
+
+其中 `.venv` 是虚拟环境目录名.  
+Here, `.venv` is the virtual environment directory name.
+
+### `source .venv/bin/activate`
+
+激活虚拟环境.  
+Activate the virtual environment.
+
+```bash
+source .venv/bin/activate
+```
+
+激活后, 当前终端会使用虚拟环境中的 Python 和 pip.  
+After activation, the current terminal uses Python and pip from the virtual environment.
+
+### `which python` and `which pip`
+
+查看当前使用的 Python 和 pip 路径.  
+Check the paths of the currently used Python and pip.
+
+```bash
+which python
+which pip
+```
+
+### `pip install`
+
+安装 Python 包.  
+Install a Python package.
+
+```bash
+pip install numpy
+```
+
+### `pip list`
+
+查看当前环境中已安装的 Python 包.  
+List installed Python packages in the current environment.
+
+```bash
+pip list
+```
+
+### `pip freeze`
+
+导出当前环境中的包和版本.  
+Export packages and versions in the current environment.
+
+```bash
+pip freeze > requirements.txt
+```
+
+### `requirements.txt`
+
+`requirements.txt` 用于记录项目依赖.  
+`requirements.txt` is used to record project dependencies.
+
+别人可以使用下面的命令复现环境:  
+Others can reproduce the environment with:
+
+```bash
+pip install -r requirements.txt
+```
+
+### `deactivate`
+
+退出当前虚拟环境.  
+Exit the current virtual environment.
+
+```bash
+deactivate
+```
