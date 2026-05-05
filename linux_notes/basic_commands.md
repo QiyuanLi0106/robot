@@ -453,3 +453,91 @@ source /opt/ros/jazzy/setup.bash
 
 如果把这条命令写进 `.bashrc`, 每次打开 bash 终端时就会自动加载 ROS 2 环境.  
 If this command is written into `.bashrc`, the ROS 2 environment will be loaded automatically whenever a bash terminal starts.
+
+## apt 包管理与命令查询 / apt Package Management and Command Lookup
+
+### `sudo apt update`
+
+更新本地软件包索引.  
+Update the local package index.
+
+```bash
+sudo apt update
+```
+
+### `apt search`
+
+搜索软件包.  
+Search for packages.
+
+```bash
+apt search tree
+```
+
+### `apt show`
+
+查看软件包详细信息.  
+Show detailed information about a package.
+
+```bash
+apt show tree
+```
+
+### `sudo apt install`
+
+安装软件包.  
+Install a package.
+
+```bash
+sudo apt install tree
+```
+
+### `sudo apt remove`
+
+卸载软件包.  
+Remove a package.
+
+```bash
+sudo apt remove tree
+```
+
+### `which`
+
+查看命令实际对应的可执行文件路径.  
+Show the executable path used by a command.
+
+```bash
+which python3
+which tree
+```
+
+### `whereis`
+
+查找命令相关的二进制文件, 源码和帮助文档位置.  
+Find binary, source, and manual locations for a command.
+
+```bash
+whereis python3
+whereis tree
+```
+
+### `dpkg -l`
+
+查看系统中已安装的软件包.  
+List installed packages on the system.
+
+```bash
+dpkg -l | grep tree
+```
+
+### `tree`
+
+以树状结构显示目录.  
+Display directories in a tree-like format.
+
+```bash
+tree -L 2
+```
+
+其中 `-L 2` 表示只显示 2 层目录.  
+Here, `-L 2` means displaying only two directory levels.
