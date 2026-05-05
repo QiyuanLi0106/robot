@@ -398,3 +398,58 @@ env | grep ROBOT
 
 ROS 2 经常使用 `source install/setup.bash`, 目的是把 ROS 2 工作空间的环境变量加载到当前终端.  
 ROS 2 often uses `source install/setup.bash` to load workspace environment variables into the current terminal.
+
+## `.bashrc`, alias, and Automatic Environment Loading
+
+### `.bashrc`
+
+`.bashrc` 是 bash 启动交互式终端时会读取的配置文件.  
+`.bashrc` is a configuration file read by bash when starting an interactive terminal.
+
+```bash
+nano ~/.bashrc
+```
+
+修改 `.bashrc` 前建议先备份.  
+It is recommended to back up `.bashrc` before modifying it.
+
+```bash
+cp ~/.bashrc ~/.bashrc_backup
+```
+
+### `alias`
+
+`alias` 可以给长命令设置短名字.  
+`alias` can define a short name for a long command.
+
+```bash
+alias robot_status='~/bashrc_practice/robot_status.sh'
+```
+
+之后可以直接运行:  
+Then it can be run directly:
+
+```bash
+robot_status
+```
+
+### `source ~/.bashrc`
+
+修改 `.bashrc` 后, 使用 `source ~/.bashrc` 让配置在当前终端立即生效.  
+After modifying `.bashrc`, use `source ~/.bashrc` to make the configuration take effect in the current terminal.
+
+```bash
+source ~/.bashrc
+```
+
+### Why ROS 2 Uses `.bashrc`
+
+ROS 2 经常需要加载环境配置, 例如:  
+ROS 2 often needs to load environment configuration, for example:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+```
+
+如果把这条命令写进 `.bashrc`, 每次打开 bash 终端时就会自动加载 ROS 2 环境.  
+If this command is written into `.bashrc`, the ROS 2 environment will be loaded automatically whenever a bash terminal starts.
