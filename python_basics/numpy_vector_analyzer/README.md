@@ -42,6 +42,13 @@ Run the program:
 python vector_analyzer.py vector.txt
 ```
 
+查看帮助信息:  
+Show help information:
+
+```bash
+python vector_analyzer.py -h
+```
+
 ## 示例输入 / Example Input
 
 ```text

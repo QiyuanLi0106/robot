@@ -1,12 +1,20 @@
+import argparse
 from pathlib import Path
-import sys
+
 import numpy as np
 
-def get_file_path() -> Path | None:
-    if len(sys.argv) != 2:
-        print("Usage: python vector_analyzer.py <vector_file>")
-        return None
-    return Path(sys.argv[1])
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+    description = "Analyze a numeric vector stored in a txt file."
+    )
+
+    parser.add_argument(
+    "vector_file",
+    type=Path,
+    help="Path to the input vector txt file.",
+    )
+
+    return parser.parse_args()
 
 def load_vector(file_path: Path) -> np.ndarray:
     text = file_path.read_text(encoding="utf-8")
@@ -45,9 +53,8 @@ def save_result(result_text: str) -> None:
 
 
 def main() -> None:
-    file_path = get_file_path()
-    if file_path is None:
-        return
+    args = parse_args()
+    file_path = args.vector_file
 
     if not file_path.exists():
         print(f"Error: file not found -> {file_path}")
