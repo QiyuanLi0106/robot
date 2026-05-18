@@ -49,6 +49,13 @@ Show help information:
 python vector_analyzer.py -h
 ```
 
+指定输出文件:  
+Specify the output file:
+
+```bash
+python vector_analyzer.py vector.txt --output my_result.txt
+```
+
 ## 示例输入 / Example Input
 
 ```text

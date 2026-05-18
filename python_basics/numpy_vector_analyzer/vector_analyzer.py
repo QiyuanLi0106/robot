@@ -6,12 +6,19 @@ import numpy as np
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
     description = "Analyze a numeric vector stored in a txt file."
-    )
+)
 
     parser.add_argument(
     "vector_file",
     type=Path,
     help="Path to the input vector txt file.",
+    )
+
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default= "result.txt",
+        help="Path to the output result txt file."
     )
 
     return parser.parse_args()
@@ -47,14 +54,14 @@ def format_result(stats: dict) -> str:
     )
     return result
 
-def save_result(result_text: str) -> None:
-    output_path = Path(__file__).parent / "result.txt"
+def save_result(result_text: str, output_path: Path | str) -> None:
     output_path.write_text(result_text, encoding="utf-8")
 
 
 def main() -> None:
     args = parse_args()
     file_path = args.vector_file
+    output_path = args.output
 
     if not file_path.exists():
         print(f"Error: file not found -> {file_path}")
@@ -74,7 +81,7 @@ def main() -> None:
     result_text = format_result(stats)
 
     print(result_text)
-    save_result(result_text)
+    save_result(result_text, output_path)
 
 
 if __name__ == "__main__":
