@@ -53,7 +53,7 @@ python vector_analyzer.py -h
 Specify the output file:
 
 ```bash
-python vector_analyzer.py vector.txt --output my_result.txt
+python vector_analyzer.py vector.txt --output ms_result.txt
 ```
 
 ## 示例输入 / Example Input
